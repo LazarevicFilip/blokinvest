@@ -1,0 +1,86 @@
+@import 'config';
+body{
+    overflow-x: hidden!important;
+}
+.pozadina{
+    background-image: url("../img/7.jpg");
+    background-repeat: no-repeat;
+    height:160px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+   
+    .prodaja{
+        color: $secondary-color;
+        padding: 40px;
+        position: relative;
+        h2{font-weight: 400;}
+    }
+}
+#zgrade{
+    margin-top: 60px;
+    img{border:2px solid $primary-color;}
+    .zgrada-slika{
+        position: relative;
+        .overlay-rasprodato{
+            @include overlay();
+            background: $overlay-color;
+            p{
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%,-50%);
+                font-size: 2rem;
+                color: #ff0000;
+            }
+        }
+    }
+    .bold{font-weight: bold;}  
+}
+.bez-margina{
+    margin:0 !important;
+    padding:0 !important;
+}
+#stanovi{
+    margin-bottom: 120px;
+    h2{
+        color: $primary-color;
+        font-size: 1.8rem;
+    }
+    .stan{
+        overflow: hidden;
+        position: relative;
+        .overlay-stan{
+            position: absolute;
+            top:60%;
+            left:0;
+            right:0;
+            bottom:0;
+            width:100%;
+            height:100%;
+            padding:25px 30px;
+            transition: 0.3s;
+        }
+        .stan-opis{
+            float: left;
+            h4,p{opacity: 0;color:$secondary-color;}
+        }
+        .stan-cena{
+            float: right;
+            span{opacity:0;color:$secondary-color;font-size: 1.1rem;}
+        }
+ 
+    }
+}
+/*hover efekat za ime i cenu stanova*/
+.stan:hover .overlay-stan{background: rgba(0,0,0,0.8);}
+.stan:hover .stan-opis h4{opacity: 1!important;}
+.stan:hover .stan-opis p{opacity: 1!important;}
+.stan:hover .stan-cena span{opacity: 1!important;}
+@media screen and(max-width:1000px){
+    header .naslov{font-size:2.5rem!important;}
+}
+@media screen and(max-width:680px){
+    header .naslov{font-size: 2rem !important;padding:5px!important;}
+}

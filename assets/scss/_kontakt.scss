@@ -1,0 +1,32 @@
+.brand-logo{
+    @include logo;
+}
+.material-icons{
+    color: $primary-color;
+}
+.sidenav{
+    a:hover{
+        color:$primary-color;
+    }
+}
+.mat-link{
+    color: #000!important;
+    font-size: 1.1rem!important;
+    display: inline!important;
+    padding:0 0.5rem!important;
+    &:hover{color:$primary-color;font-weight: 600;background-color: rgba(0,0,0,0);}
+}
+#kontakt{
+    margin:40px 0;
+    .collection{
+        margin-top: 20px;
+    }
+    .boja{
+        background: linear-gradient(315deg, #80deea 0%, #1976D2 94%);
+    }
+}
+#mapa{
+    margin: 70px 0;
+    iframe{width:100%;filter: brightness(0.9);}
+    h3{font-size: 2.3rem;margin-bottom: 3rem;text-transform: uppercase;color:#1976d2;}
+}

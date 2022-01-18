@@ -1,0 +1,31 @@
+@import 'config';
+#onama{
+    h1{ @include bordura;}
+    i{color: $primary-color}
+    ul{
+        padding-left: 0!important;
+        li{font-size: 17px;}
+    }
+
+}
+#tim{
+    h2{ @include bordura;}
+    .card{
+        border:1px solid $primary-color;
+        .card-body{
+            padding:0.75rem 1.25rem!important;
+            h5,p{margin-bottom: 0.35rem!important;}
+        }
+    }
+}
+#izjava{
+    background: rgb(55,55,55);
+    padding:50px 0 30px 0;
+    text-align: center;
+    margin-top:80px;
+    p{color:$secondary-color;}
+    .blockquote-footer{color:rgb(212, 212, 212)!important;}
+
+}
+.blockquote{margin-bottom: 0!important;font-size: 1.5rem!important;}
+

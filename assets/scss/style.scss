@@ -1,0 +1,160 @@
+@import 'prodaja';
+@import 'config';
+@import 'onama';
+@import 'kontakt';
+@import 'autor';
+*{
+    box-sizing: border-box;
+}
+body{
+    a{text-decoration: none!important;}
+    ul{list-style-type: none!important;}
+    img{width: 100%!important;}
+    font-family: 'Lato', sans-serif;
+}
+.slider-slika{
+    height:100vh;
+}
+.navbar{
+    @include bg-sec();
+}
+.navbar-brand{
+    @include logo;
+}
+.nav-link{
+    color: #000!important;
+    font-size: 1.1rem;
+    &:hover{color:$primary-color;font-weight: 600;}
+    }
+.link{color:$primary-color;font-weight: 500;}
+.carousel-caption{
+    color:$secondary-color;
+    margin-bottom:40vh;
+
+    h1{
+        font-size: 4rem;
+    }
+    h2{font-size:1.4rem}
+    .btn1{
+        border:0.125rem solid $primary-color;
+        background: $primary-color;
+        @extend %btn;
+    }
+    .btn2{
+        border:0.125rem solid #93bcf2;
+        background: #93bcf2;
+        @extend %btn; 
+        
+    }
+    .btn3{
+        border:0.125rem solid #2c7bc6;
+        background: #2c7bc6;
+        @extend %btn;
+    }
+}
+.overlay{
+    @include overlay();
+    background: $overlay-color;
+}
+.about-left{
+    position:relative;
+    img{border:3px solid $primary-color;}
+    .overlay-text{
+        @include overlay();
+        opacity: 0;
+        transition: 0.4s ease-out;
+        p{
+            position: absolute;
+            top: 45%;
+            right: 50%;
+            transform: translate(50%,-50%);
+            display: block;
+            color: $secondary-color;
+             
+        }
+        a{
+            position: absolute;
+            top: 60%;
+            right: 50%;
+            transform: translate(50%,-50%);
+            display: block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            background-color: $primary-color;
+            color: $secondary-color;
+        }
+    }
+    &:hover .overlay-text{opacity:1;background:$overlay-color}
+}
+.bordole{
+    @include bordura;
+}
+.paragraph{font-size:1.15rem;}
+#clients{
+    background-image: url("../img/5.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 350px;
+    margin-top: 120px;
+    width:100%;
+    padding: 120px 0;
+    position: relative;
+
+    p{
+        font-size: 2rem;
+        color: $secondary-color;
+    }
+    .istakni{color: $primary-color;font-weight: 700;}
+}
+#services{
+background: #ccc;
+    padding:110px 0;
+    h3,i{@include bordura;}
+    .service{
+        padding:1.5rem;
+        &:hover{background:#ccc;box-shadow: 0 0 25px rgba(0,0,0,0.2);}
+    }
+}
+footer{
+    background: $footer-color;
+    padding: 80px 0 20px 0;
+    h4{
+        font: {
+            size: 1.4rem;
+            weight: 600;
+        }
+        margin-top: 2rem;
+        text-transform: uppercase;
+    }
+    i{
+        color: $primary-color;
+        padding-right: 0.5rem;
+    }
+    li{padding: 0.6rem 0;}
+    li,a,p{
+        color: #a5a5a5;
+    }
+    a{&:hover{color: $secondary-color;}}
+    ul{padding-left: 0!important;}
+}
+@media screen and(max-width:1200px){
+    .overlay-text p{
+       width: 250px;
+    }
+}
+@media screen and(max-width:1080px){
+    .carousel-caption{
+        h1{font-size:3rem;}
+        h2{font-size:1.3rem}
+    }
+    #about h3{
+        margin-top:1.2rem;
+    }
+}
+@media screen and(max-width:600px){
+    .carousel-caption{
+        h1{font-size:2.8rem}
+    }
+    #clients{margin-top:50px;}
+    #services{padding:60px;}
+}

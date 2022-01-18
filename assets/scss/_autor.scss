@@ -1,0 +1,22 @@
+
+#autor{
+    margin: 80px 0;
+}
+.my-card{
+    background: linear-gradient(315deg, #26c6da 0%, #4f95da 94%);
+    .card-content{
+        padding: 18px!important;
+        i{
+            padding:0 10px;
+        }
+        li{
+            padding:10px 0;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+        img{
+            min-height:300px;
+        }
+    }  
+}
+
